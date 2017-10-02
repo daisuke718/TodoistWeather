@@ -83,7 +83,7 @@
 
         // 画面内の日付部分を取得
         var todoistDates = [];
-        $('.h2_date').each(function() {
+        $('.subsection_header__date').each(function() {
             var monthDay = $(this).text().match(/(\d+)月(\d+)日/);
             var todoistDateObj = new Object({
                 month: monthDay[1],
@@ -157,9 +157,9 @@
       */
     function getTaskList() {
         var taskList = {};
-        $('.day_holder').each(function() {
+        $('.section_day').each(function() {
             var dayHolder = $(this);
-            var key = dayHolder.find('.h2_date').text();
+            var key = dayHolder.find('.subsection_header__date').text();
             var value = dayHolder.find('.task_item').size();
             taskList[key] = value;
         });
